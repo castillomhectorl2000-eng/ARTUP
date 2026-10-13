@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artup | Inicio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header / Nav -->
+    <header class="header">
+        <div class="logo-container">
+            <svg class="logo-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M50 10L85 85H65L50 45L35 85H15L50 10Z" fill="white"/>
+                <path d="M65 45L85 25M70 30L90 10M75 15L95 -5" stroke="white" stroke-width="4"/>
+            </svg>
+            <span class="logo-text">ARTUP</span>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html" class="active">Inicio</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+        <button id="cart-btn" class="cart-btn">
+            🛒 Carrito (<span id="cart-count">0</span>)
+        </button>
+    </header>
+
+    <!-- Carrusel de 4 Banners Rotativos -->
+    <section class="hero-slider-section">
+        <div class="slider-container" id="slider-container">
+            <div class="slide active" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1920&q=80')">
+                <div class="slide-content">
+                    <h1>NUEVA COLECCIÓN URBANA</h1>
+                    <p>Diseño, actitud y estilo futurista para destacar.</p>
+                    <a href="catalogo.html" class="btn-primary">Ver Catálogo</a>
+                </div>
+            </div>
+            <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=1920&q=80')">
+                <div class="slide-content">
+                    <h1>TECHWEAR DE VANGUARDIA</h1>
+                    <p>Indumentaria diseñada para el movimiento y la resistencia.</p>
+                    <a href="catalogo.html" class="btn-primary">Explorar Techwear</a>
+                </div>
+            </div>
+            <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=1920&q=80')">
+                <div class="slide-content">
+                    <h1>MINIMAL BLACK</h1>
+                    <p>La elegancia de la oscuridad en cada prenda.</p>
+                    <a href="catalogo.html" class="btn-primary">Comprar Ahora</a>
+                </div>
+            </div>
+            <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&w=1920&q=80')">
+                <div class="slide-content">
+                    <h1>EDICIÓN CYBERPUNK</h1>
+                    <p>Rompe los esquemas con nuestra línea exclusiva.</p>
+                    <a href="catalogo.html" class="btn-primary">Descubrir Más</a>
+                </div>
+            </div>
+        </div>
+        <button class="slider-btn prev" id="prev-slide">&#10094;</button>
+        <button class="slider-btn next" id="next-slide">&#10095;</button>
+    </section>
+
+    <!-- Sección exclusiva de Recomendaciones (Aleatorias) -->
+    <section class="recommendations-section">
+        <h2>Recomendaciones para ti</h2>
+        <div class="product-grid" id="recommendations-grid">
+            <!-- Se cargan aleatoriamente 3 o 4 prendas destacadas desde JS -->
+        </div>
+        <div class="center-btn-container">
+            <a href="catalogo.html" class="btn-secondary">Ver todo el Catálogo</a>
+        </div>
+    </section>
+
+    <!-- Carrito Drawer -->
+    <div id="cart-drawer" class="cart-drawer">
+        <div class="cart-header">
+            <h3>Tu Carrito</h3>
+            <button id="close-cart" class="close-cart">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <p class="empty-cart-msg">El carrito está vacío.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total-price">$0.00</span>
+            </div>
+            <button id="checkout-whatsapp" class="btn-whatsapp">Finalizar por WhatsApp</button>
+        </div>
+    </div>
+
+    <div id="toast" class="toast">Producto agregado al carrito</div>
+
+    <footer id="contacto" class="footer">
+        <h3>ARTUP</h3>
+        <p>Indumentaria de vanguardia.</p>
+        <p class="copyright">&copy; 2026 Artup. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

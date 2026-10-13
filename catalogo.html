@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artup | Catálogo Exclusivo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header / Nav -->
+    <header class="header">
+        <div class="logo-container">
+            <svg class="logo-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M50 10L85 85H65L50 45L35 85H15L50 10Z" fill="white"/>
+                <path d="M65 45L85 25M70 30L90 10M75 15L95 -5" stroke="white" stroke-width="4"/>
+            </svg>
+            <span class="logo-text">ARTUP</span>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Inicio</a>
+            <a href="catalogo.html" class="active">Catálogo</a>
+            <a href="index.html#contacto">Contacto</a>
+        </nav>
+        <button id="cart-btn" class="cart-btn">
+            🛒 Carrito (<span id="cart-count">0</span>)
+        </button>
+    </header>
+
+    <!-- Sección de Catálogo Completo con Filtros y Ordenamiento -->
+    <section class="catalog-page-section">
+        <h2>Catálogo Completo</h2>
+
+        <div class="controls-bar">
+            <div class="control-group">
+                <label for="collection-filter">Colección:</label>
+                <select id="collection-filter" class="select-control">
+                    <option value="todas">Todas las Colecciones</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label for="price-sort">Ordenar por Precio:</label>
+                <select id="price-sort" class="select-control">
+                    <option value="defecto">Por defecto</option>
+                    <option value="asc">Menor a Mayor</option>
+                    <option value="desc">Mayor a Menor</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="product-grid" id="product-grid">
+            <!-- Cargado dinámicamente desde productos.txt -->
+        </div>
+    </section>
+
+    <!-- Carrito Drawer -->
+    <div id="cart-drawer" class="cart-drawer">
+        <div class="cart-header">
+            <h3>Tu Carrito</h3>
+            <button id="close-cart" class="close-cart">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <p class="empty-cart-msg">El carrito está vacío.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total-price">$0.00</span>
+            </div>
+            <button id="checkout-whatsapp" class="btn-whatsapp">Finalizar por WhatsApp</button>
+        </div>
+    </div>
+
+    <div id="toast" class="toast">Producto agregado al carrito</div>
+
+    <footer class="footer">
+        <h3>ARTUP</h3>
+        <p>Indumentaria de vanguardia.</p>
+        <p class="copyright">&copy; 2026 Artup. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
